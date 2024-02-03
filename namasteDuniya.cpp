@@ -1,6 +1,11 @@
 #include<iostream>
 using namespace std;
-
-int main(){
-    cout<<"Namaste Duniya :-)"<<endl;  // << - is used to write output
+/**
+ * Prints "Namaste Duniya :)" to the console.
+ * 
+ * @return 0 on success, non-zero on failure
+ */
+int main() {
+    cout << "Namaste Duniya :)" << endl;
+    return 0;
 }

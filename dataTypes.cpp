@@ -1,6 +1,10 @@
 #include<iostream>
 using namespace std;
-
+/**
+ * This function returns the size of the variable passed as an argument.
+ * @param var The variable whose size needs to be determined.
+ * @return The size of the variable in bytes.
+ */
 int main(){
     int a = 1230;
     cout<<a<<endl;
@@ -16,7 +20,7 @@ int main(){
 
     bool TF = true;
     cout<<TF<<endl;
-    
+
 int size;
 
      size = sizeof(a);
