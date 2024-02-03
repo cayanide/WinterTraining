@@ -16,6 +16,7 @@ int main(){
 
     bool TF = true;
     cout<<TF<<endl;
+    
 int size;
 
      size = sizeof(a);
