@@ -10,7 +10,11 @@ using namespace std;
  */
 
 int main(){
-    int a=5,b=9;
+    int a,b;
+    a=cin.get();
+    b=cin.get();
+
+
     if(a>b){
         cout<<"a is greater than b";
     }
@@ -18,5 +22,6 @@ int main(){
         cout<<"b is greater than a";
     }
     
+    cout<<a<<b;
 
 }
