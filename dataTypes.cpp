@@ -33,5 +33,11 @@ int size;
       size = sizeof(TF);
      cout<<"size of TF is : "<<size<<endl;
 
+     int gh ='f';   
+     cout<<gh<<endl;
+
+     char ui = '54';
+     cout<<ui<<endl;
+
 
 }
