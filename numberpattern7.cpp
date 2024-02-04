@@ -9,23 +9,16 @@ cin >> row ;
 
 int i=1,j=1,k=1;
 
-while(k<row){
-    while(j<=i){
-
-        if(k<=row){
-        cout << k << " ";
-        k++;
+while(i<=row){
+    while (j<=i){
+        cout<<(i-j+1)<<" ";
         j++;
-
-        }
-        
     }
-
-    cout << endl;
-    i++;
+    cout<<endl;
+     cout<<endl;
+    i=i+1;
     j=1;
-
-    }
+}
 
 
 }
