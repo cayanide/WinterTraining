@@ -3,6 +3,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "FindUnique",
+      "request": "launch",
+      "mainClass": "FindUnique",
+      "projectName": "WinterTraining_fe68f6db"
+    },
+    {
+      "type": "java",
       "name": "Pattern12",
       "request": "launch",
       "mainClass": "Pattern12",
