@@ -4,10 +4,25 @@ using namespace std;
 int main(){
 
 
-    cout<<"How many stars at Borders? "<<endl;
-    int star,i=0,j=0,center;
-    cin>>star;
+
     
+    
+    int star,i=0,j=0,center;
+    bool flag=true;
+    
+    
+    
+    while(flag==true){
+        cout<<"How many stars at Borders?(Enter Odd Value) :  "<<endl;
+        cin>>star;
+        if(star%2>0){
+        flag=false;
+        }
+        else {
+            cout<<"Invalid Input"<<endl;
+        }
+        
+    }
     
     
     
