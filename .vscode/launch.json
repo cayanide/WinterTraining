@@ -36,8 +36,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "d:/WORK/C+++ WINTER PEP/WinterTraining/C++",
-      "program": "d:/WORK/C+++ WINTER PEP/WinterTraining/C++/build/Debug/outDebug",
+      "cwd": ".",
+      "program": "build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
