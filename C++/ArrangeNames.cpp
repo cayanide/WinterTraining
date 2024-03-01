@@ -20,3 +20,14 @@ int main(){
     cout<<head->data<<endl;
 
 }
+
+
+
+
+
+/*
+
+
+
+
+*/
