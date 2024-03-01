@@ -14,8 +14,8 @@ fn main() {
     let num2: i32 = input2.trim().parse().expect("Invalid input");
 
     if num1 == num2 {
-        println!("The numbers are equal.");
+        println!("The numbers { } are equal.",num1);
     } else {
-        println!("The numbers are not equal.");
+        println!("The numbers { } , { } are not equal.",num1,num2);
     }
 }
