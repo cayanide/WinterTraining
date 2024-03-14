@@ -49,11 +49,18 @@ else {
 }
 }
 Node* deleteAtHead(Node* head){
-    Node* temp =head;
-    if(temp!= NULL) {
-        head = head->next;
-        delete temp;
+    if (head == nullptr) { 
+        return nullptr; // No elements to delete
     }
+
+    Node* temp = head;
+    head = head->next;
+
+    if (head != nullptr) {
+        head->prev = nullptr;
+    }
+
+    delete temp; // Deallocate the old head
     return head;
 }
 
@@ -170,6 +177,7 @@ Node* searchForInsertion(Node* head,int data){
 bool choices(int choice, Node* head,bool flag){
     int element;
     
+    
 switch (choice) {
  
     case 1:
@@ -220,7 +228,8 @@ switch (choice) {
      cout<<" Enter Data For Searching for Insertion : "<< endl;
      cin>>element;
      head=searchForInsertion(head,element);
-      break;
+        break;
+
     case 0:
      flag=false;
      break;
@@ -232,44 +241,8 @@ switch (choice) {
 return flag;
 }
 
-
-
-int main(){
+bool ChoicesPrinter(bool flag, int choice,Node* head){
     
-int size,i=0,choice,element;
-
-bool flag=true;
-
-Node* head = nullptr;
-
-
-
-
-
-/* ***********************************************************************************************/
-
-cout<<"Welcome To Linked List "<<endl;
-
-cout<<"Enter the size of the list "<<endl;
-
-cin>>size;
-
-
-for(i=0;i<size;i++)
-{
-    cout<<"Enter The Element : "<<i<<endl;
-    int onceValue=0;
-    cin>>onceValue;
-    head= insertAtHead(head,onceValue);
-   
-}
-cout << "Created linked list: ";
-PrintList(head);
-
-
-while(flag==true){
-
-
 
 
 cout<<"              "<<endl;
@@ -306,9 +279,45 @@ cout<<"              "<<endl;
 
 cout<<"Enter 0 for Exit : "<< endl;
 
+
+while(flag==true){
 cin>>choice;
 flag=choices( choice,head,flag);
+}
+}
 
+
+int main(){
+    
+int size,i=0,choice,element;
+
+bool flag=true;
+
+Node* head = nullptr;
+/* ***********************************************************************************************/
+
+cout<<"Welcome To Linked List "<<endl;
+
+cout<<"Enter the size of the list "<<endl;
+
+cin>>size;
+
+
+for(i=0;i<size;i++)
+{
+    cout<<"Enter The Element : "<<i<<endl;
+    int onceValue=0;
+    cin>>onceValue;
+    head= insertAtHead(head,onceValue);
+   
+}
+cout << "Created linked list: ";
+PrintList(head);
+
+
+while(flag==true){
+    flag=ChoicesPrinter(flag,choice,head);
+    cout<<"--------------------------------"<<endl;
 }
 
 }
