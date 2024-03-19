@@ -66,5 +66,7 @@
     "string_view": "cpp",
     "ranges": "cpp",
     "span": "cpp"
-  }
+  },
+  "workbench.productIconTheme": "icons-carbon",
+  "workbench.colorTheme": "Vaporizer Cherry Dark"
 }
