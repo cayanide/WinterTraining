@@ -25,6 +25,7 @@ void display() {
 int main(){
 
 int size;
+
 cout<<"Enter the size of the stack : "<<endl;
 
 cin>>size;
