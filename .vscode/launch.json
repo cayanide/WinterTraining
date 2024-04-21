@@ -1,53 +1,13 @@
 {
   "version": "0.2.0",
   "configurations": [
-    
-    {
-      "type": "java",
-      "name": "FindUnique",
-      "request": "launch",
-      "mainClass": "FindUnique",
-      "projectName": "WinterTraining_fe68f6db"
-    },
-    {
-      "type": "java",
-      "name": "Pattern12",
-      "request": "launch",
-      "mainClass": "Pattern12",
-      "projectName": "WinterTraining_fe68f6db"
-    },
-    {
-      "type": "java",
-      "name": "test",
-      "request": "launch",
-      "mainClass": "test",
-      "projectName": "WinterTraining_fe68f6db"
-    },
-    {
-      "type": "java",
-      "name": "Main",
-      "request": "launch",
-      "mainClass": "Main",
-      "projectName": "WinterTraining_fe68f6db"
-    },
     {
       "name": "C/C++ Runner: Debug Session",
-      "type": "cppdbg",
+      "type": "lldb",
       "request": "launch",
       "args": [],
-      "stopAtEntry": false,
-      "externalConsole": true,
-      "cwd": ".",
-      "program": "build/Debug/outDebug",
-      "MIMode": "gdb",
-      "miDebuggerPath": "gdb",
-      "setupCommands": [
-        {
-          "description": "Enable pretty-printing for gdb",
-          "text": "-enable-pretty-printing",
-          "ignoreFailures": true
-        }
-      ]
+      "cwd": "/Users/sayanchatterjee/Work/WinterTraining/C++",
+      "program": "/Users/sayanchatterjee/Work/WinterTraining/C++/build/Debug/outDebug"
     }
   ]
 }
