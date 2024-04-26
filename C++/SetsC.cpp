@@ -3,18 +3,15 @@ using namespace std;
 #include <set>
 #include<vector>
 
-vector<int> findUnion(int arr1,int arr2,int n,int m){
+set<int> findUnion(set<int> arr1,set<int> arr2,int n,int m,set<int> Union){
 
+Union.insert(arr1,arr2);
 
-
+return Union;
 }
+vector<int> main(){
 
-
-
-
-
-
-int main(){
+    
     int n,m,element;
 
 
@@ -24,23 +21,33 @@ int main(){
     cout<<"Enter Array 2 Size : "<<endl;
     cin>>m;
 
-std::vector<int> arr1;
-std::vector<int> arr2;
+std::set<int> arr1;
+std::set<int> arr2;
 
 
 
  for(int i =0;i<n;i++){
     cin>>element;
-    arr1.push_back(element);
+    arr1.insert(element);
 }
 for(int j=0;j<m;j++){
     cin>>element;
-    arr2.push_back(element);
+    arr2.insert(element);
 
 }
 
-vector <int> Union= findUnion(arr1,arr2,n,m);
 
+set<int> Unions;
+Unions= findUnion(arr1,arr2,n,m,Unions);
+
+vector <int> result(Unions.begin(),Unions.end());
+
+for (int num : Unions) {
+    std::cout << num << " ";
+}
+std::cout << std::endl;
+
+return result;
 
 
 
