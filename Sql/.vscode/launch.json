@@ -6,8 +6,8 @@
       "type": "lldb",
       "request": "launch",
       "args": [],
-      "cwd": "/Users/sayanchatterjee/Work/WinterTraining/Sql C++",
-      "program": "/Users/sayanchatterjee/Work/WinterTraining/Sql C++/build/Debug/outDebug"
+      "cwd": "/Users/sayanchatterjee/Work/WinterTraining/Sql",
+      "program": "/Users/sayanchatterjee/Work/WinterTraining/Sql/build/Debug/outDebug"
     }
   ]
 }
