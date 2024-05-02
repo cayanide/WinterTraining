@@ -246,7 +246,7 @@ int main() {
     cout << endl;
 
     while(flag == true) {                   // Menu-driven interface for performing operations on the linked list.
-        cout << " *_* Enter A Choice : " << endl;  
+        cout << " *_* Enter A Choice : " << endl;
         cout << "1. Insert At Head" << endl;
         cout << "2. Insert At Tail" << endl;
         cout << "3. Delete At Head" << endl;
@@ -329,7 +329,7 @@ int main() {
                 cout << "Invalid Choice" << endl; // Display error message for invalid choice.
         }
     }
-    
+
     cout << "--------------------------------" << endl;
     cout << endl;
     return 0;
