@@ -1,19 +1,13 @@
 #include <iostream>
 #include <mysql.h>
 #include <string>
+using namespace std;
 
-// MySQL connection details
 const char* host = "localhost";
 const char* user = "root";
 const char* password = "acer@23!";
 const char* database_name = "Info";
 
-bool getdata(const std::string& username , MYSQL* conn){
-string query = "SELECT * FROM Data WHERE username = '" + username + "';";
-
-
-}
-// Function to check if username exists in the Users table
 bool checkUsernameExists(const std::string& username, MYSQL* conn) {
     std::string query = "SELECT COUNT(*) FROM Users WHERE username = '" + username + "';";
     if (mysql_query(conn, query.c_str()) != 0) {
@@ -34,8 +28,6 @@ bool checkUsernameExists(const std::string& username, MYSQL* conn) {
 
     return (count > 0);
 }
-
-// Function to create a new user
 void createUser(MYSQL* conn) {
     std::string email, username, password;
 
@@ -61,11 +53,8 @@ void createUser(MYSQL* conn) {
         std::cerr << "Error creating user: " << mysql_error(conn) << std::endl;
     } else {
         std::cout << "User created successfully!" << std::endl;
-        
     }
 }
-
-// Function to authenticate user login
 bool authenticateUser(MYSQL* conn) {
     std::string username, password;
 
@@ -96,51 +85,38 @@ bool authenticateUser(MYSQL* conn) {
 
     return (count > 0);
 }
-
-int main() {
-    MYSQL* conn = mysql_init(NULL);
+int main(){
+      MYSQL* conn = mysql_init(NULL);
     if (conn == NULL) {
         std::cerr << "Error initializing MySQL connection" << std::endl;
         return 1;
     }
-
-    // Connect to MySQL database
-    if (mysql_real_connect(conn, host, user, password, database_name, 0, NULL, 0) == NULL) {
+      if (mysql_real_connect(conn, host, user, password, database_name, 0, NULL, 0) == NULL) {
         std::cerr << "Error connecting to MySQL database: " << mysql_error(conn) << std::endl;
         mysql_close(conn);
         return 1;
     }
-cout<<"Welcome To program To See Your Targets Today Choose an Option"<<endl;
+    char choice;
+    cout<<"Welcome To Program : New? "<<endl;
+    cout<<"0 or 1 (0 For No , 1 For yes)";
 
-    int choice;
-
-    cout << "1. Login\n2. Sign Up\nChoose an option: ";
-    cin >> choice;
-
-    switch (choice) {
-        case 1:
+switch (choice) {
+        case 0:
             if (authenticateUser(conn)) {
                 std::cout << "Login successful!" << std::endl;
-                bool logout=false;
-                while(logout==false){
-                 bool logout=  getdata(conn);
-                }
             } else {
                 std::cout << "Invalid credentials. Login failed." << std::endl;
             }
             break;
-        case 2:
+        case 1:
             createUser(conn);
             break;
         default:
             std::cout << "Invalid choice" << std::endl;
             break;
     }
-
-
-
-    // Close MySQL connection
-    mysql_close(conn);
+       mysql_close(conn);
 
     return 0;
+
 }
