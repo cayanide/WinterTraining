@@ -32,7 +32,31 @@ int main() {
 
     cout<<map["sayan"]<<endl;
 
+cout<<map["Unknownkey"]<<endl;
+cout<<map.at("Unknownkey")<<endl;
 
+//size
+
+cout<<map.size()<<endl;
+
+//Check Presence
+cout<<map.count("love")<<endl;
+map.erase("love");
+cout<<map.size()<<endl;
+
+//One way of Printing MAP
+
+for(auto i:map){
+    cout<<i.first<<" "<<i.second<<endl;
+}
+
+//Second Way Of Printing Map -- Iterator
+
+unordered_map<string, int>:: iterator it = map.begin();
+while(it !=map.end()){
+    cout<<it->first<<" "<<it->second<<endl;
+    it++;
+}
 
     return 0;
 }
