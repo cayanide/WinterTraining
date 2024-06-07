@@ -7,24 +7,23 @@ using namespace std;
 class Solution{
 public:
     int evenlyDivides(int N){
-        int temp=N;
-        int digit;
-        vector<int> ans;
-            while(temp>0){
-                digit=temp%10;
-                if(N%digit==0){
-                    ans.push_back(digit);
-                }
-                temp=temp%10;
+       int count = 0;
+  int digit;
 
-                
+  
+  while (N > 0) {
+    digit = N % 10; 
 
-            }
-            for(auto elem : ans){
-                cout<<elem<<" ";
-            }
-            return 0;
+  
+    if (digit != 0 && N % digit == 0) {
+      count++; 
+    }
 
+  
+    N /= 10;
+  }
+
+  return count;
 
         }
 

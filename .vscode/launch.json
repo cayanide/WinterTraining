@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "d:/Un-Matrix/WinterTraining/C++",
-      "program": "d:/Un-Matrix/WinterTraining/C++/build/Debug/outDebug",
+      "cwd": "d:/Un-Matrix/WinterTraining/C++/Geeks For Geeks",
+      "program": "d:/Un-Matrix/WinterTraining/C++/Geeks For Geeks/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
