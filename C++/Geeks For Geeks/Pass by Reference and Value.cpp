@@ -3,6 +3,7 @@
 
 #include <iostream>
 using namespace std;
+#include<vector>
 
 
 // } Driver Code Ends
@@ -13,10 +14,9 @@ class Solution {
     vector<int> passedBy(int a, int &b) {
          a++;
 
-        // Add 2 to b (pass by reference, modifies original value)
         b += 2;
 
-        // Return a vector containing the modified values
+        
         return {a, b};
         // code here
     }
