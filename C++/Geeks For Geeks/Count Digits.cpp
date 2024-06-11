@@ -8,15 +8,24 @@ class Solution{
 public:
     int evenlyDivides(int N){
         int n=N;
-              int count=0;
-              while(N>0){
-                  int digit=N%10;
-                  if(digit!=0&&n%digit==0){
-                      count++;
-                  }
-                  N=N/10;
-              }
-              return count;
+       int count = 0;
+  int digit;
+
+
+  while (N > 0) {
+    digit = N % 10;
+
+
+    if (digit != 0 && n % digit == 0) {
+      count++;
+    }
+
+
+    N /= 10;
+  }
+
+  return count;
+
         }
 
         //code here
