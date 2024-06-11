@@ -1,5 +1,5 @@
 //{ Driver Code Starts
-#include<iostream> 
+#include<iostream>
 using namespace std;
 #include<vector>
 
@@ -7,33 +7,25 @@ using namespace std;
 class Solution{
 public:
     int evenlyDivides(int N){
-       int count = 0;
-  int digit;
-
-  
-  while (N > 0) {
-    digit = N % 10; 
-
-  
-    if (digit != 0 && N % digit == 0) {
-      count++; 
-    }
-
-  
-    N /= 10;
-  }
-
-  return count;
-
+        int n=N;
+              int count=0;
+              while(N>0){
+                  int digit=N%10;
+                  if(digit!=0&&n%digit==0){
+                      count++;
+                  }
+                  N=N/10;
+              }
+              return count;
         }
 
         //code here
-    
+
 };
 
 //{ Driver Code Starts.
-int main() 
-{ 
+int main()
+{
     int t;
     cin>>t;
     while(t--)
@@ -43,6 +35,6 @@ int main()
         Solution ob;
         cout << ob.evenlyDivides(N) << endl;
     }
-    return 0; 
+    return 0;
 }
 // } Driver Code Ends
