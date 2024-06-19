@@ -8,7 +8,7 @@ public:
         vector<int> positives;
         vector<int> negatives;
 
-        // Separate the positive and negative numbers
+
         for (int num : nums) {
             if (num > 0) {
                 positives.push_back(num);
@@ -17,7 +17,6 @@ public:
             }
         }
 
-        // Merge them back alternatingly
         vector<int> result;
         for (int i = 0; i < positives.size(); ++i) {
             result.push_back(positives[i]);
