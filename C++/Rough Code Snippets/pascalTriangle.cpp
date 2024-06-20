@@ -12,9 +12,9 @@ int fact=1;
 int main(){
 
     int n;
-    
 
-    cout<<"Enter n=> \n";   
+
+    cout<<"Enter n=> \n";
      cin>>n;
 
 for(int i=0;i<=n;i++){
@@ -22,7 +22,7 @@ for(int i=0;i<=n;i++){
       cout<<factorial(n)/(factorial(n-j)*factorial(j))<<" ";
     }
     cout<<endl;
-}
+}f
 
 
 
