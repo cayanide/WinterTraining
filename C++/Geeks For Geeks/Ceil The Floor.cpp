@@ -4,7 +4,7 @@
 
 using namespace std;
 
-pair<int, int> getFloorAndCeil(int arr[], int n, int x);
+
 
 int main() {
     int t;
