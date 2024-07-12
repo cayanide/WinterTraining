@@ -4,7 +4,7 @@ class Solution {
 public:
     int uniquePaths(int m, int n) {
 
-        std::vector<std::vector<int>> dp(m, std::vector<int>(n, 0));
+        vector<vector<int>> dp(m, vector<int>(n, 0));
 
 
         dp[0][0] = 1;
