@@ -24,8 +24,7 @@ private:
 
         for (int i = start; i < candidates.size(); ++i) {
             if (candidates[i] > target)
-                break; // No need to check further, since candidates are sorted
-
+                break;
             current.push_back(candidates[i]);
             backtrack(candidates, target - candidates[i], i, current, result);
             current.pop_back();
