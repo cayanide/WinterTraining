@@ -8,22 +8,23 @@ using namespace std;
 class Solution{
     public:
     //Function to count the frequency of all elements from 1 to N in the array.
-    void frequencyCount(vector<int>& arr,int N, int P)
+    void frequencyCount(vector<int>& arr,int n, int p)
     {
-    vector<int> ans;
-    //int n = arr.size();
-    for(int i = 1;i<=P;i++){
-        int temp=0;
-        for(int j = 0;j<N;j++){
-            temp=arr[j];
-
-            if(j == 0){
-                ans.push_back(0);
+        for (int i = 0; i < n; ++i) {
+                arr[i]--;
             }
-            else if()
 
-        }
-    }
+
+            for (int i = 0; i < n; ++i) {
+                if (arr[i] % p < n) {
+                    arr[arr[i] % p] += p;
+                }
+            }
+
+
+            for (int i = 0; i < n; ++i) {
+                arr[i] = arr[i] / p;
+            }
 
 
         // code here
